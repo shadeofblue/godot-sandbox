@@ -3,7 +3,17 @@
 [resource]
 code = "shader_type particles;
 
+uniform sampler2D point;
+
 uniform vec2 pos = vec2(0.0, 75.0);
+
+uniform vec3 v11 = vec3(0.5, 0.0, -0.9);
+uniform vec3 v12 = vec3(0.0, 0.5, 0.0);
+uniform vec3 v21 = vec3(0.5, 0.0, 0.9);
+uniform vec3 v22 = vec3(0.0, 0.5, 0.0);
+uniform vec3 v31 = vec3(0.5, 0.0, 0.0);
+uniform vec3 v32 = vec3(0.0, 0.5, 0.9);
+
 
 float rnd_fl(float f) {
 	return fract(sin(f*0.5453123)*sin(f/0.23123)/sin(f*0.83123));
@@ -13,12 +23,6 @@ float rnd(int index, float time, float qa, float qb) {
 	return rnd_fl(float(index) * fract(sin(time + qa) + qb));
 }
 
-uniform vec3 v11 = vec3(0.5, 0.0, -0.9);
-uniform vec3 v12 = vec3(0.0, 0.5, 0.0);
-uniform vec3 v21 = vec3(0.5, 0.0, 0.9);
-uniform vec3 v22 = vec3(0.0, 0.5, 0.0);
-uniform vec3 v31 = vec3(0.5, 0.0, 0.0);
-uniform vec3 v32 = vec3(0.0, 0.5, 0.9);
 
 mat3 m1() { return mat3(
 	v11,
