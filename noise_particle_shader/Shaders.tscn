@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://noisy.tres" type="Shader" id=1]
+[ext_resource path="res://ifs.tres" type="Shader" id=2]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 1 )
+shader_param/pos = Vector2( 0, 0 )
+shader_param/radius = 256.0
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 2 )
+shader_param/pos = Vector2( -200, 120 )
+shader_param/v11 = Vector3( 0.607, -0.309, -0.703 )
+shader_param/v12 = Vector3( 0.453, 0.55, 0 )
+shader_param/v21 = Vector3( 0.587, 0, 2.947 )
+shader_param/v22 = Vector3( 0.102, 0.437, 0.194 )
+shader_param/v31 = Vector3( 0.751, -0.182, 0 )
+shader_param/v32 = Vector3( -0.159, -0.233, 1.382 )
+
+[node name="Shaders" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="NoisyCircle" type="Particles2D" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.447059 )
+amount = 10000
+lifetime = 1e+07
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource( 1 )
+
+[node name="IFS" type="Particles2D" parent="."]
+modulate = Color( 1, 0.694118, 0.0235294, 0.0627451 )
+amount = 1000000
+lifetime = 1e+07
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource( 2 )
