@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://noisy.tres" type="Shader" id=1]
 [ext_resource path="res://ifs.tres" type="Shader" id=2]
@@ -27,6 +27,16 @@ shader_param/v21 = Vector3( 0.558, 0, 2.22 )
 shader_param/v22 = Vector3( 0.152, 0.437, 0.042 )
 shader_param/v31 = Vector3( 0.904, -0.408, 0 )
 shader_param/v32 = Vector3( 0.412, -0.767, 0.872 )
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = ExtResource( 2 )
+shader_param/pos = Vector2( -200, 120 )
+shader_param/v11 = Vector3( 0.113, 1.14, -0.469 )
+shader_param/v12 = Vector3( 0.473, -0.279, 0 )
+shader_param/v21 = Vector3( 0.558, 0, 2.22 )
+shader_param/v22 = Vector3( 0.146, 0.44, 0.042 )
+shader_param/v31 = Vector3( 0.747, -0.408, 0 )
+shader_param/v32 = Vector3( 0.746, -0.767, 0.872 )
 
 [sub_resource type="ShaderMaterial" id=4]
 shader = ExtResource( 2 )
@@ -72,14 +82,24 @@ one_shot = true
 explosiveness = 1.0
 process_material = SubResource( 2 )
 
-[node name="IFS rocks" type="Particles2D" parent="."]
+[node name="IFS trilobite" type="Particles2D" parent="."]
+visible = false
 modulate = Color( 1, 0.694118, 0.0235294, 0.0627451 )
-rotation = 1.03673
+rotation = 0.818559
 amount = 1000000
 lifetime = 1e+07
 one_shot = true
 explosiveness = 1.0
 process_material = SubResource( 5 )
+
+[node name="IFS antlers" type="Particles2D" parent="."]
+modulate = Color( 1, 0.694118, 0.0235294, 0.0627451 )
+rotation = -1.91288
+amount = 1000000
+lifetime = 1e+07
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource( 6 )
 
 [node name="IFS" type="Particles2D" parent="."]
 visible = false
