@@ -31,12 +31,12 @@ shader_param/v32 = Vector3( 0.412, -0.767, 0.872 )
 [sub_resource type="ShaderMaterial" id=6]
 shader = ExtResource( 2 )
 shader_param/pos = Vector2( -200, 120 )
-shader_param/v11 = Vector3( 0.113, 1.14, -0.469 )
-shader_param/v12 = Vector3( 0.473, -0.279, 0 )
-shader_param/v21 = Vector3( 0.558, 0, 2.22 )
-shader_param/v22 = Vector3( 0.146, 0.44, 0.042 )
-shader_param/v31 = Vector3( 0.747, -0.408, 0 )
-shader_param/v32 = Vector3( 0.746, -0.767, 0.872 )
+shader_param/v11 = Vector3( 0.121, 1.228, -0.476 )
+shader_param/v12 = Vector3( 0.484, -0.279, 0.104 )
+shader_param/v21 = Vector3( 0.545, 0.003, 2.22 )
+shader_param/v22 = Vector3( 0.138, 0.447, 0.042 )
+shader_param/v31 = Vector3( 0.676, -0.398, 0 )
+shader_param/v32 = Vector3( 0.629, -0.791, 0.872 )
 
 [sub_resource type="ShaderMaterial" id=4]
 shader = ExtResource( 2 )
